@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Panokuko — Glutenfreie Backstube &amp; Café in Leipzig</title>
+<meta name="description" content="100% glutenfreie Backstube, Café und Naturkostladen in Leipzig-Plagwitz. Sicher für Zöliakie. Frisches Brot, Kuchen, Donuts — alles glutenfrei." />
+<meta name="keywords" content="glutenfrei Leipzig, glutenfreie Bäckerei Leipzig, Zöliakie Restaurant Leipzig, gluten-free bakery Leipzig, Panokuko Leipzig, celiac safe Leipzig, glutenfreies Café Plagwitz" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="restaurant" />
+<meta property="og:title" content="Panokuko — Glutenfreie Backstube &amp; Café in Leipzig" />
+<meta property="og:description" content="100% glutenfrei. Die ganze Küche. Jedes Gericht. Sicher für Zöliakie — in Leipzig-Plagwitz." />
+<meta property="og:image" content="images/cake-layer-slice.png" />
+<meta property="og:locale" content="de_DE" />
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Panokuko — Glutenfreie Backstube &amp; Café in Leipzig" />
+<meta name="twitter:description" content="100% glutenfrei. Die ganze Küche. Jedes Gericht. Sicher für Zöliakie." />
+<meta name="twitter:image" content="images/cake-layer-slice.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Panokuko | glutenfreie Backstube, Naturkost & Café",
+  "servesCuisine": "Gluten-Free, Vegan, Bakery",
+  "image": "images/cake-layer-slice.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Erich-Zeigner-Allee 64a",
+    "addressLocality": "Leipzig",
+    "postalCode": "04229",
+    "addressCountry": "DE"
+  },
+  "email": "panokuko@posteo.de",
+  "priceRange": "€",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "36"
+  },
+  "openingHours": ["We-Fr 11:00-18:00", "Sa 11:00-16:00"],
+  "url": "https://instagram.com/pano.kuko"
+}
+<!-- TODO: verify and insert "telephone": "+49..." once the phone number is confirmed on Google Maps -->
+</script>
+
+<style>
+  /* ============ TOKENS ============ */
+  :root{
+    --cream:#F5EDE0;
+    --cream-deep:#EFE3D2;
+    --sage:#8B9E7C;
+    --sage-deep:#6E8163;
+    --terracotta:#C47A5A;     /* tweakable accent */
+    --accent:var(--terracotta);
+    --charcoal:#2E2E2E;
+    --charcoal-soft:#4a463f;
+    --gold:#D4B88C;
+    --paper:#FBF6EC;
+    --line:rgba(46,46,46,.12);
+
+    --serif:"DM Serif Display", Georgia, serif;   /* tweakable */
+    --sans:"DM Sans", system-ui, sans-serif;
+
+    --maxw:1200px;
+    --r-lg:26px;
+    --r-md:16px;
+    --r-sm:10px;
+    --shadow-sm:0 2px 10px rgba(58,42,28,.07);
+    --shadow-md:0 14px 40px rgba(58,42,28,.13);
+    --shadow-lg:0 30px 80px rgba(58,42,28,.20);
+
+    --grain-opacity:.5;        /* tweakable */
+    --blur-cap:9px;            /* tweakable */
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;scroll-padding-top:84px;}
+  body{
+    margin:0;
+    font-family:var(--sans);
+    color:var(--charcoal);
+    background:var(--cream);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  /* Layered warm gradient bloom */
+  body::before{
+    content:"";
+    position:fixed;inset:0;z-index:-2;
+    background:
+      radial-gradient(120% 90% at 85% -10%, rgba(212,184,140,.55), transparent 55%),
+      radial-gradient(90% 80% at 5% 5%, rgba(196,122,90,.16), transparent 50%),
+      linear-gradient(180deg,#F8F1E4 0%, var(--cream) 38%, var(--cream-deep) 100%);
+  }
+  /* Film grain */
+  body::after{
+    content:"";
+    position:fixed;inset:0;z-index:-1;pointer-events:none;
+    opacity:var(--grain-opacity);
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+    mix-blend-mode:multiply;
+  }
+
+  a{color:inherit;text-decoration:none;}
+  img{display:block;max-width:100%;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+
+  h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.06;letter-spacing:-.01em;margin:0;}
+  .eyebrow{
+    font-family:var(--sans);font-weight:600;font-size:.78rem;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--sage-deep);display:inline-flex;align-items:center;gap:.55rem;
+  }
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--accent);border-radius:2px;}
+
+  /* ============ BUTTONS ============ */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+    font-family:var(--sans);font-weight:600;font-size:1rem;
+    padding:.92rem 1.6rem;border-radius:999px;cursor:pointer;border:1.5px solid transparent;
+    transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;
+    min-height:48px;line-height:1;
+  }
+  .btn svg{width:19px;height:19px;}
+  .btn-primary{background:var(--accent);color:#fff;box-shadow:0 10px 24px rgba(196,122,90,.32);}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(196,122,90,.42);}
+  .btn-ghost{background:rgba(255,255,255,.6);border-color:var(--charcoal);color:var(--charcoal);}
+  .btn-ghost:hover{background:var(--charcoal);color:var(--cream);transform:translateY(-2px);}
+  .btn-sage{background:var(--sage-deep);color:#fff;}
+  .btn-sage:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(110,129,99,.4);}
+
+  /* ============ HEADER ============ */
+  header{
+    position:sticky;top:0;z-index:60;
+    transition:background .3s ease, box-shadow .3s ease, padding .3s ease;
+    padding:14px 0;
+  }
+  header.scrolled{
+    background:rgba(248,241,228,.86);
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    box-shadow:0 1px 0 var(--line);
+  }
+  .nav{display:flex;align-items:center;gap:1.4rem;}
+  .brand{display:flex;flex-direction:column;line-height:1;margin-right:auto;}
+  .brand .logo{font-family:var(--serif);font-size:1.7rem;letter-spacing:.01em;display:flex;align-items:center;gap:.5rem;}
+  .brand .logo .mark{color:var(--accent);}
+  .brand .tag{font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sage-deep);font-weight:600;margin-top:3px;}
+  .navlinks{display:flex;gap:1.5rem;align-items:center;}
+  .navlinks a{font-size:.95rem;font-weight:500;position:relative;padding:4px 0;color:var(--charcoal-soft);}
+  .navlinks a::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;background:var(--accent);transition:width .25s ease;}
+  .navlinks a:hover{color:var(--charcoal);}
+  .navlinks a:hover::after{width:100%;}
+  .nav-actions{display:flex;align-items:center;gap:.7rem;}
+  .lang{
+    display:inline-flex;border:1.5px solid var(--line);border-radius:999px;overflow:hidden;
+    font-weight:600;font-size:.82rem;background:rgba(255,255,255,.5);
+  }
+  .lang button{border:0;background:none;padding:.5rem .7rem;cursor:pointer;color:var(--charcoal-soft);font-family:var(--sans);font-weight:600;min-height:40px;}
+  .lang button.active{background:var(--charcoal);color:var(--cream);}
+  .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:10px;width:44px;height:44px;align-items:center;justify-content:center;}
+  .hamburger span{width:24px;height:2px;background:var(--charcoal);border-radius:2px;transition:transform .3s ease, opacity .3s ease;}
+  .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .hamburger.open span:nth-child(2){opacity:0;}
+  .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+  /* mobile drawer */
+  .drawer{
+    position:fixed;inset:0 0 0 auto;width:min(82vw,340px);z-index:70;
+    background:var(--paper);box-shadow:var(--shadow-lg);
+    transform:translateX(100%);transition:transform .35s cubic-bezier(.5,0,.2,1);
+    display:flex;flex-direction:column;padding:90px 32px 40px;gap:.4rem;
+  }
+  .drawer.open{transform:translateX(0);}
+  .drawer a{font-family:var(--serif);font-size:1.5rem;padding:.55rem 0;border-bottom:1px solid var(--line);}
+  .drawer .btn{margin-top:1.2rem;}
+  .scrim{position:fixed;inset:0;background:rgba(46,46,46,.4);z-index:65;opacity:0;pointer-events:none;transition:opacity .3s ease;}
+  .scrim.open{opacity:1;pointer-events:auto;}
+  .drawer-close{position:absolute;top:22px;right:22px;width:42px;height:42px;border:0;background:none;cursor:pointer;font-size:1.6rem;color:var(--charcoal);}
+
+  /* ============ HERO ============ */
+  .hero{position:relative;padding:48px 0 70px;}
+  /* Variant A: full-bleed photo */
+  .hero-a{display:block;}
+  .hero-a .frame{
+    position:relative;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-lg);
+    min-height:min(76vh,640px);display:flex;align-items:flex-end;
+  }
+  .hero-a .frame img,.hero-a .frame video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .hero-a .frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,22,14,.05) 0%,rgba(30,22,14,.08) 40%,rgba(30,22,14,.72) 100%);}
+  .hero-a .copy{position:relative;z-index:2;color:#fff;padding:clamp(28px,5vw,60px);max-width:780px;}
+  .hero-a h1{color:#fff;font-size:clamp(2.6rem,6.4vw,5.2rem);text-shadow:0 2px 30px rgba(0,0,0,.3);}
+  .hero-a .sub{font-size:clamp(1.05rem,1.7vw,1.4rem);max-width:560px;margin-top:1rem;color:rgba(255,255,255,.94);text-shadow:0 1px 12px rgba(0,0,0,.35);}
+
+  .hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem;}
+
+  /* trust badge */
+  .trust-badge{
+    display:inline-flex;align-items:center;gap:.7rem;flex-wrap:wrap;
+    background:rgba(255,255,255,.92);color:var(--charcoal);
+    padding:.6rem 1.1rem;border-radius:999px;font-weight:600;font-size:.92rem;
+    box-shadow:var(--shadow-sm);margin-bottom:1.4rem;
+  }
+  .hero-a .trust-badge{background:rgba(38,28,18,.5);color:#fff;border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);}
+  .trust-badge .stars{color:var(--gold);letter-spacing:.05em;}
+  .trust-badge .dot{width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.5;}
+  .trust-badge .safe{color:var(--sage-deep);}
+  .hero-a .trust-badge .safe{color:#cfe0bd;}
+
+  /* ============ SECTION SCAFFOLD ============ */
+  section{padding:clamp(56px,8vw,110px) 0;position:relative;}
+  .sec-head{max-width:720px;margin-bottom:clamp(34px,4vw,60px);}
+  .sec-head h2{font-size:clamp(2rem,4vw,3.4rem);margin-top:1rem;}
+  .sec-head p{font-size:1.12rem;color:var(--charcoal-soft);margin-top:1rem;}
+
+  .reveal{opacity:1;}
+  @media (prefers-reduced-motion: no-preference){
+    @supports (animation-timeline: view()){
+      .reveal{
+        animation:blurin linear both;
+        animation-timeline:view();
+        animation-range:entry 0% entry 46%;
+      }
+      @keyframes blurin{
+        from{opacity:0;filter:blur(var(--blur-cap));transform:translateY(34px);}
+        to{opacity:1;filter:blur(0);transform:none;}
+      }
+    }
+  }
+
+  /* ============ TRUST STRIP ============ */
+  #versprechen{background:linear-gradient(180deg,transparent, rgba(139,158,124,.10) 30%, rgba(139,158,124,.10) 70%, transparent);}
+  .promise-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.3rem;}
+  .promise-card{
+    background:var(--paper);border-radius:var(--r-md);padding:2rem 1.7rem;box-shadow:var(--shadow-sm);
+    border:1px solid var(--line);transition:transform .3s ease, box-shadow .3s ease;
+  }
+  .promise-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-md);}
+  .promise-ic{
+    width:54px;height:54px;border-radius:14px;display:flex;align-items:center;justify-content:center;
+    background:rgba(139,158,124,.18);color:var(--sage-deep);margin-bottom:1.1rem;
+  }
+  .promise-card:nth-child(3) .promise-ic{background:rgba(196,122,90,.16);color:var(--accent);}
+  .promise-ic svg{width:28px;height:28px;}
+  .promise-card h3{font-size:1.3rem;margin-bottom:.5rem;}
+  .promise-card p{font-size:.97rem;color:var(--charcoal-soft);margin:0;}
+
+  /* ============ BAKERY SHOWCASE ============ */
+  .bake-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+  .bake-card{
+    background:var(--paper);border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-sm);
+    border:1px solid var(--line);transition:transform .35s ease, box-shadow .35s ease;
+  }
+  .bake-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);}
+  .bake-card .ph{aspect-ratio:4/3;overflow:hidden;position:relative;}
+  .bake-card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;}
+  .bake-card:hover .ph img{transform:scale(1.06);}
+  .bake-body{padding:1.4rem 1.5rem 1.6rem;}
+  .bake-body h3{font-size:1.45rem;margin-bottom:.45rem;}
+  .bake-body p{font-size:.98rem;color:var(--charcoal-soft);margin:0;}
+  .bake-tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem;}
+  .bake-note{
+    margin-top:2.4rem;text-align:center;font-family:var(--serif);font-style:italic;
+    font-size:clamp(1.2rem,2vw,1.7rem);color:var(--charcoal-soft);max-width:760px;margin-left:auto;margin-right:auto;
+  }
+  .bake-note a{color:var(--accent);border-bottom:2px solid rgba(196,122,90,.4);}
+
+  /* ============ ABOUT ============ */
+  #ueber{background:linear-gradient(180deg,transparent,rgba(212,184,140,.16));}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:center;}
+  .about-copy p{font-size:1.12rem;color:var(--charcoal-soft);margin:0 0 1.1rem;}
+  .about-copy p:first-of-type{font-family:var(--serif);font-size:clamp(1.4rem,2.3vw,1.9rem);color:var(--charcoal);line-height:1.3;}
+  .about-photos{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:1rem;}
+  .about-photos figure{margin:0;border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-md);}
+  .about-photos .tall{grid-row:span 2;aspect-ratio:3/4.4;}
+  .about-photos .wide{aspect-ratio:4/3;}
+  .about-photos img{width:100%;height:100%;object-fit:cover;}
+
+  /* ============ EXTRAS ============ */
+  .extra-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;}
+  .extra-card{
+    border:1.5px solid var(--line);border-radius:var(--r-md);padding:1.8rem 1.5rem;background:rgba(251,246,236,.5);
+    transition:border-color .3s ease, background .3s ease;
+  }
+  .extra-card:hover{border-color:var(--sage);background:var(--paper);}
+  .extra-ic{width:46px;height:46px;color:var(--sage-deep);margin-bottom:1rem;}
+  .extra-ic svg{width:100%;height:100%;}
+  .extra-card h3{font-size:1.22rem;margin-bottom:.4rem;}
+  .extra-card p{font-size:.95rem;color:var(--charcoal-soft);margin:0;}
+
+  /* ============ REVIEWS ============ */
+  #bewertungen{background:linear-gradient(180deg,transparent,rgba(139,158,124,.12));}
+  .rev-top{display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-bottom:clamp(30px,4vw,52px);}
+  .rating-pill{display:flex;align-items:center;gap:1rem;background:var(--paper);padding:1rem 1.5rem;border-radius:var(--r-md);box-shadow:var(--shadow-sm);border:1px solid var(--line);}
+  .rating-pill .num{font-family:var(--serif);font-size:2.8rem;line-height:1;color:var(--accent);}
+  .rating-pill .stars{color:var(--gold);font-size:1.1rem;letter-spacing:.08em;}
+  .rating-pill .meta{font-size:.86rem;color:var(--charcoal-soft);}
+  .rev-grid{columns:3;column-gap:1.5rem;}
+  .rev-card{
+    break-inside:avoid;margin-bottom:1.5rem;background:var(--paper);border-radius:var(--r-md);
+    padding:1.7rem 1.7rem 1.5rem;box-shadow:var(--shadow-sm);border:1px solid var(--line);
+  }
+  .rev-card.feature{border-color:rgba(196,122,90,.4);background:linear-gradient(180deg,#fff,var(--paper));}
+  .rev-card .stars{color:var(--gold);font-size:1rem;letter-spacing:.1em;margin-bottom:.8rem;}
+  .rev-card .quote{font-family:var(--serif);font-size:1.18rem;line-height:1.4;color:var(--charcoal);margin:0 0 1rem;}
+  .rev-card.feature .quote{font-size:1.3rem;}
+  .rev-card .who{display:flex;align-items:center;gap:.6rem;font-size:.84rem;color:var(--charcoal-soft);font-weight:500;}
+  .rev-card .who .g{width:18px;height:18px;}
+  .rev-flag{font-size:1rem;}
+
+  /* ============ VISIT ============ */
+  .visit-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(28px,4vw,56px);align-items:stretch;}
+  .visit-info{display:flex;flex-direction:column;gap:1.5rem;}
+  .info-row{display:flex;gap:1rem;align-items:flex-start;}
+  .info-row .ic{width:42px;height:42px;flex:none;border-radius:12px;background:rgba(196,122,90,.14);color:var(--accent);display:flex;align-items:center;justify-content:center;}
+  .info-row .ic svg{width:22px;height:22px;}
+  .info-row h3{font-size:1.05rem;font-family:var(--sans);font-weight:700;margin-bottom:.2rem;}
+  .info-row p{margin:0;color:var(--charcoal-soft);font-size:1rem;}
+  .info-row a.link{color:var(--accent);font-weight:600;}
+  .hours-line{display:flex;justify-content:space-between;max-width:280px;padding:.25rem 0;border-bottom:1px dashed var(--line);font-size:.97rem;}
+  .hours-line.closed{color:#a99;}
+  .hours-line span:last-child{font-weight:600;}
+  .amenities{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.4rem;}
+  .amenities span{font-size:.82rem;background:rgba(139,158,124,.16);color:var(--sage-deep);padding:.35rem .8rem;border-radius:999px;font-weight:600;}
+  .map-card{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-md);min-height:420px;border:1px solid var(--line);}
+  .map-card iframe{width:100%;height:100%;min-height:420px;border:0;display:block;}
+  .visit-cta{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:.6rem;}
+
+  /* ============ FOOTER ============ */
+  footer{background:var(--charcoal);color:#e8e1d4;padding:clamp(54px,7vw,90px) 0 130px;}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.5rem;align-items:start;}
+  .foot-brand .logo{font-family:var(--serif);font-size:2rem;color:#fff;display:flex;align-items:center;gap:.5rem;}
+  .foot-brand .logo .mark{color:var(--gold);}
+  .foot-brand p{color:#b7afa0;max-width:340px;margin:1rem 0 1.4rem;}
+  .foot-col h4{font-family:var(--sans);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:#9c9484;margin:0 0 1rem;}
+  .foot-col a, .foot-col p{display:block;color:#d8d0c2;margin:0 0 .6rem;font-size:.98rem;}
+  .foot-col a:hover{color:var(--gold);}
+  .foot-cta{display:flex;gap:.7rem;flex-wrap:wrap;}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:3rem;padding-top:1.6rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;color:#8d8676;font-size:.84rem;}
+
+  /* ============ MOBILE ACTION BAR ============ */
+  .action-bar{
+    position:fixed;left:0;right:0;bottom:0;z-index:55;display:none;
+    grid-template-columns:1fr 1fr 1fr;
+    background:rgba(248,241,228,.95);backdrop-filter:blur(12px);
+    border-top:1px solid var(--line);box-shadow:0 -6px 24px rgba(58,42,28,.12);
+  }
+  .action-bar a{
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
+    padding:.6rem;min-height:62px;font-size:.74rem;font-weight:600;color:var(--charcoal-soft);
+  }
+  .action-bar a svg{width:22px;height:22px;color:var(--accent);}
+  .action-bar a:active{background:rgba(196,122,90,.1);}
+  .action-bar a + a{border-left:1px solid var(--line);}
+
+  /* floating call button */
+  .fab{
+    position:fixed;right:20px;bottom:24px;z-index:58;width:60px;height:60px;border-radius:50%;
+    background:var(--sage-deep);color:#fff;display:flex;align-items:center;justify-content:center;
+    box-shadow:0 12px 28px rgba(110,129,99,.5);transition:transform .25s ease;
+  }
+  .fab:hover{transform:scale(1.08);}
+  .fab svg{width:26px;height:26px;}
+
+  /* ============ TWEAKS PANEL ============ */
+  .tweaks-toggle{
+    position:fixed;top:50%;right:0;transform:translateY(-50%);z-index:80;
+    background:var(--charcoal);color:var(--cream);border:0;cursor:pointer;
+    writing-mode:vertical-rl;padding:.9rem .4rem;border-radius:10px 0 0 10px;font-family:var(--sans);
+    font-weight:600;letter-spacing:.12em;font-size:.72rem;text-transform:uppercase;box-shadow:var(--shadow-md);
+  }
+  .tweaks{
+    position:fixed;top:50%;right:18px;transform:translateY(-50%) translateX(120%);z-index:85;
+    width:288px;background:var(--paper);border-radius:18px;box-shadow:var(--shadow-lg);
+    border:1px solid var(--line);padding:1.3rem 1.4rem 1.5rem;transition:transform .35s cubic-bezier(.5,0,.2,1);
+    max-height:88vh;overflow:auto;
+  }
+  .tweaks.open{transform:translateY(-50%) translateX(0);}
+  .tweaks h4{font-family:var(--serif);font-size:1.3rem;margin:0 0 .2rem;}
+  .tweaks .hint{font-size:.78rem;color:var(--charcoal-soft);margin:0 0 1.1rem;}
+  .tweaks .tw-close{position:absolute;top:12px;right:14px;border:0;background:none;font-size:1.3rem;cursor:pointer;color:var(--charcoal-soft);}
+  .tw-row{margin-bottom:1.15rem;}
+  .tw-row label{display:block;font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--sage-deep);margin-bottom:.55rem;}
+  .swatches{display:flex;gap:.5rem;}
+  .swatches button{width:34px;height:34px;border-radius:50%;border:2px solid transparent;cursor:pointer;box-shadow:var(--shadow-sm);}
+  .swatches button.active{border-color:var(--charcoal);transform:scale(1.08);}
+  .seg{display:flex;background:rgba(46,46,46,.07);border-radius:10px;padding:3px;}
+  .seg button{flex:1;border:0;background:none;padding:.5rem;border-radius:8px;cursor:pointer;font-family:var(--sans);font-weight:600;font-size:.84rem;color:var(--charcoal-soft);}
+  .seg button.active{background:#fff;color:var(--charcoal);box-shadow:var(--shadow-sm);}
+  .tweaks input[type=range]{width:100%;accent-color:var(--accent);}
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:980px){
+    .promise-grid{grid-template-columns:repeat(2,1fr);}
+    .bake-grid{grid-template-columns:repeat(2,1fr);}
+    .extra-grid{grid-template-columns:repeat(2,1fr);}
+    .rev-grid{columns:2;}
+    .about-grid,.visit-grid{grid-template-columns:1fr;}
+  }
+  @media (max-width:768px){
+    .navlinks{display:none;}
+    .nav-actions .lang{display:none;}
+    .hamburger{display:flex;}
+    .action-bar{display:grid;}
+    .fab{bottom:78px;right:16px;width:54px;height:54px;}
+    body{padding-bottom:0;}
+    footer{padding-bottom:96px;}
+    .hero{padding-top:24px;}
+    .nav-actions .btn-primary{padding:.7rem 1.1rem;font-size:.9rem;}
+  }
+  @media (max-width:560px){
+    .promise-grid,.bake-grid,.extra-grid{grid-template-columns:1fr;}
+    .rev-grid{columns:1;}
+    .about-photos{grid-template-columns:1fr 1fr;}
+    .wrap{padding:0 20px;}
+    .tweaks{width:calc(100vw - 36px);}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header id="site-header">
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="Panokuko Startseite">
+      <span class="logo">Pan<span class="mark">o</span>kuko</span>
+      <span class="tag" data-i18n="brandTag">glutenfreie Backstube &amp; Café</span>
+    </a>
+    <nav class="navlinks" aria-label="Hauptnavigation">
+      <a href="#versprechen" data-i18n="navPromise">Versprechen</a>
+      <a href="#backstube" data-i18n="navBakery">Backstube</a>
+      <a href="#ueber" data-i18n="navAbout">Über uns</a>
+      <a href="#bewertungen" data-i18n="navReviews">Bewertungen</a>
+      <a href="#besuch" data-i18n="navVisit">Besuch</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang" role="group" aria-label="Sprache / Language">
+        <button data-lang="de" class="active">DE</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <a class="btn btn-primary" href="#besuch" data-i18n="navCta">Besuche uns</a>
+      <button class="hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Mobile Navigation">
+  <button class="drawer-close" id="drawerClose" aria-label="Menü schließen">&times;</button>
+  <a href="#versprechen" data-i18n="navPromise">Versprechen</a>
+  <a href="#backstube" data-i18n="navBakery">Backstube</a>
+  <a href="#ueber" data-i18n="navAbout">Über uns</a>
+  <a href="#bewertungen" data-i18n="navReviews">Bewertungen</a>
+  <a href="#besuch" data-i18n="navVisit">Besuch</a>
+  <div class="lang" style="align-self:flex-start;margin-top:1.2rem;">
+    <button data-lang="de" class="active">DE</button>
+    <button data-lang="en">EN</button>
+  </div>
+  <a class="btn btn-primary" href="#besuch" data-i18n="navCta">Besuche uns</a>
+</aside>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" style="padding-top:34px;">
+    <div class="wrap">
+      <!-- Variant A -->
+      <div class="hero-a">
+        <div class="frame reveal">
+          <video src="images/hero.mp4" poster="images/hero-poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="Glutenfreie Backwaren von Panokuko - Video"></video>
+          <div class="copy">
+            <span class="trust-badge">
+              <span class="stars">★ 5.0</span><span class="dot"></span>
+              <span class="safe" data-i18n="badgeGf">100% glutenfrei</span><span class="dot"></span>
+              <span class="safe" data-i18n="badgeCeliac">zöliakie-sicher</span>
+            </span>
+            <h1 data-i18n="heroH">Hier darfst du<br>alles essen.</h1>
+            <p class="sub" data-i18n="heroSub">100% glutenfrei. Die ganze Küche. Jedes Gericht. Ohne Angst.</p>
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&destination=Panokuko+Erich-Zeigner-Allee+64a+04229+Leipzig" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.3-7-11a7 7 0 0 1 14 0c0 4.7-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                <span data-i18n="ctaRoute">Route planen</span>
+              </a>
+              <!-- TODO: verify and insert real phone number in tel: href -->
+              <a class="btn btn-ghost" href="tel:+49{{PHONE}}" style="color:#fff;border-color:rgba(255,255,255,.7);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+                <span data-i18n="ctaCall">Anrufen</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ TRUST STRIP ============ -->
+  <section id="versprechen">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow" data-i18n="promiseEyebrow">Unser Versprechen</span>
+        <h2 data-i18n="promiseH">Kein Fragen. Kein Zögern. Keine Angst.</h2>
+        <p data-i18n="promiseP">Bei uns ist nicht eine Sache glutenfrei — sondern alles. Die ganze Backstube, jede Zutat, jede Oberfläche.</p>
+      </div>
+      <div class="promise-grid">
+        <div class="promise-card reveal">
+          <div class="promise-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10.5" width="16" height="10" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/></svg></div>
+          <h3 data-i18n="p1H">Eigene Backstube</h3>
+          <p data-i18n="p1P">Unsere Küche ist zu 100% glutenfrei. Kein Weizen, kein Risiko, keine geteilten Geräte.</p>
+        </div>
+        <div class="promise-card reveal">
+          <div class="promise-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 4.5 5.5v5c0 4.7 3.2 8.5 7.5 10 4.3-1.5 7.5-5.3 7.5-10v-5L12 2.5Z"/><path d="m9 12 2 2 4-4.5"/></svg></div>
+          <h3 data-i18n="p2H">Zöliakie-sicher</h3>
+          <p data-i18n="p2P">Geeignet für Menschen mit Zöliakie. Nicht nur „glutenfrei-freundlich“ — sondern wirklich sicher.</p>
+        </div>
+        <div class="promise-card reveal">
+          <div class="promise-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13c-1.5-2.5-1-6 2.5-7.5C9 4.8 10.4 5 12 6c1.6-1 3-1.2 4.5-.5C20 7 20.5 10.5 19 13l-1 7.5H6L5 13Z"/><path d="M9 13.5h.01M15 13.5h.01M12 16h.01"/></svg></div>
+          <h3 data-i18n="p3H">Brot, Kuchen, Donuts</h3>
+          <p data-i18n="p3P">Alles, was du sonst nie haben konntest — frisch gebacken, jeden Tag.</p>
+        </div>
+        <div class="promise-card reveal">
+          <div class="promise-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-1-6 2-10 7-4 7-4-0 6-3 9-6 5-6 5Z"/><path d="M12 20c0-3-1-6-4-8"/></svg></div>
+          <h3 data-i18n="p4H">Auch vegan</h3>
+          <p data-i18n="p4P">Pflanzliche Milch, vegane Optionen. Für alle, die bewusst genießen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BAKERY SHOWCASE ============ -->
+  <section id="backstube">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow" data-i18n="bakeEyebrow">Aus der Backstube</span>
+        <h2 data-i18n="bakeH">Was wir backen</h2>
+        <p data-i18n="bakeP">Unsere Auswahl wechselt täglich. Das hier sind die Dinge, die du bei uns finden kannst — alle glutenfrei, alle frisch.</p>
+      </div>
+      <div class="bake-grid">
+        <article class="bake-card reveal">
+          <div class="ph"><img src="images/buffet-spread.png" alt="Frisch belegte glutenfreie Fladenbrote auf einer Theke" loading="lazy" /></div>
+          <div class="bake-body"><span class="bake-tag" data-i18n="bakeMost">Meistgeliebt</span><h3>Fladenbrot</h3><p data-i18n="bake1">Frisch gebacken, herzhaft belegt. Unser meistgeliebtes Gericht.</p></div>
+        </article>
+        <article class="bake-card reveal">
+          <div class="ph"><img src="images/sourdough-loaf.png" alt="Glutenfreier Buchweizensauerteig-Laib auf einem Kuchengitter" loading="lazy" /></div>
+          <div class="bake-body"><span class="bake-tag" data-i18n="bakeSour">Sauerteig</span><h3>Buchweizensauerteig</h3><p data-i18n="bake2">Echtes Sauerteigbrot aus Buchweizenmehl.</p></div>
+        </article>
+        <article class="bake-card reveal">
+          <div class="ph"><img src="images/lunch-curry-cashew.png" alt="Warmes saisonales Mittagsgericht mit Reis, Curry und Cashews" loading="lazy" /></div>
+          <div class="bake-body"><span class="bake-tag" data-i18n="bakeLunch">Mittags</span><h3 data-i18n="bake3H">Warme Gerichte</h3><p data-i18n="bake3">Saisonale Mittagsgerichte mit Gemüse aus der Region.</p></div>
+        </article>
+        <article class="bake-card reveal">
+          <div class="ph"><img src="images/cake-strawberry-tower.png" alt="Glutenfreie Erdbeer-Sahne-Torte mit essbaren Blüten" loading="lazy" /></div>
+          <div class="bake-body"><span class="bake-tag" data-i18n="bakeSweet">Süßes</span><h3 data-i18n="bake4H">Donuts &amp; Waffeln</h3><p data-i18n="bake4">Ja, wirklich. Glutenfreie Donuts und knusprige Waffeln. Frisch.</p></div>
+        </article>
+        <article class="bake-card reveal">
+          <div class="ph"><img src="images/cake-berry-round.png" alt="Glutenfreie Beerentorte mit essbaren Blüten und Schokoladenblättern" loading="lazy" /></div>
+          <div class="bake-body"><span class="bake-tag" data-i18n="bakeOrder">Auf Bestellung</span><h3>Kuchen &amp; Torten</h3><p data-i18n="bake5">Auch als Bestellung für deinen Geburtstag.</p></div>
+        </article>
+        <article class="bake-card reveal">
+          <div class="ph"><img src="images/lunch-cauliflower.png" alt="Glutenfreies Maniok-Gericht mit Blumenkohl-Curry und Reis" loading="lazy" /></div>
+          <div class="bake-body"><span class="bake-tag" data-i18n="bakeSpecial">Besonders</span><h3>Maniokbrot</h3><p data-i18n="bake6">Glutenfreies Brot aus Maniok — anders, überraschend, großartig.</p></div>
+        </article>
+      </div>
+      <p class="bake-note reveal" data-i18n="bakeNote">Unsere Auswahl wechselt täglich. Folge <a href="https://instagram.com/pano.kuko" target="_blank" rel="noopener noreferrer">@pano.kuko</a> für die Vitrine von heute.</p>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="ueber">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <span class="eyebrow" data-i18n="aboutEyebrow">Über Panokuko</span>
+          <!-- TODO: replace with real founder story once client provides it -->
+          <p data-i18n="about1" style="margin-top:1rem;">Eine kleine, frauengeführte Backstube mit Café und Naturkostladen in Leipzig-Plagwitz.</p>
+          <p data-i18n="about2">Bei uns ist die gesamte Küche glutenfrei — nicht nur eine Option auf der Karte, sondern alles. Wir backen täglich frisch: Brot, Focaccia, Kuchen, Donuts. Mittags gibt es warme saisonale Gerichte mit Gemüse aus der Region.</p>
+          <p data-i18n="about3">Donnerstags kann man eine bunte Gemüsekiste mitnehmen — ohne Abo. Panokuko ist ein Ort zum Wohlfühlen, Vorbeischauen und Wiederkommen.</p>
+        </div>
+        <div class="about-photos reveal">
+          <figure class="tall"><img src="images/naturkost-shop.png" alt="Naturkost-Regal mit regionalen Produkten und frischem Gemüse im Café" loading="lazy" /></figure>
+          <figure class="wide"><img src="images/exterior.png" alt="Außenansicht von Panokuko in Leipzig-Plagwitz" loading="lazy" /></figure>
+          <figure class="wide"><img src="images/lunch-cabbage-rice.png" alt="Warmes glutenfreies Mittagsgericht mit Reis und Salat" loading="lazy" /></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXTRAS ============ -->
+  <section id="mehr" style="padding-top:0;">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow" data-i18n="extraEyebrow">Mehr als ein Café</span>
+        <h2 data-i18n="extraH">Was es bei uns noch gibt</h2>
+      </div>
+      <div class="extra-grid">
+        <div class="extra-card reveal">
+          <div class="extra-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h18l-1.5 11.5H4.5L3 9Z"/><path d="M8 9V6a4 4 0 0 1 8 0v3"/></svg></div>
+          <h3 data-i18n="e1H">Naturkost-Shop</h3>
+          <p data-i18n="e1P">Regionale Produkte zum Mitnehmen.</p>
+        </div>
+        <div class="extra-card reveal">
+          <div class="extra-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18v13H3z"/><path d="M3 7l2-4h14l2 4M12 7v13M3 12h18"/></svg></div>
+          <h3 data-i18n="e2H">Gemüsekiste donnerstags</h3>
+          <p data-i18n="e2P">Frisches Gemüse, ohne Abo.</p>
+        </div>
+        <div class="extra-card reveal">
+          <div class="extra-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 9c0 3 6 3 6 0M9 15c0-3 6-3 6 0"/></svg></div>
+          <h3 data-i18n="e3H">Offenes Strick-Café</h3>
+          <p data-i18n="e3P">Jeden Donnerstag. Komm vorbei, bring deine Wolle mit.</p>
+        </div>
+        <div class="extra-card reveal">
+          <div class="extra-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21v-7h16v7M4 14a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2M12 12V8M12 8a2 2 0 1 0-2-2c0 1 1 2 2 2Zm0 0a2 2 0 1 1 2-2c0 1-1 2-2 2Z"/></svg></div>
+          <h3 data-i18n="e4H">Tortenbestellung</h3>
+          <p data-i18n="e4P">Glutenfreie Torten für deinen Geburtstag — auf Bestellung.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section id="bewertungen">
+    <div class="wrap">
+      <div class="rev-top">
+        <div class="sec-head reveal" style="margin-bottom:0;">
+          <span class="eyebrow" data-i18n="revEyebrow">Was Gäste sagen</span>
+          <h2 data-i18n="revH">Für viele eine Offenbarung.</h2>
+        </div>
+        <!-- VERIFY: review count confirmed by client = 36 -->
+        <div class="rating-pill reveal">
+          <span class="num">5.0</span>
+          <div>
+            <div class="stars">★★★★★</div>
+            <div class="meta" data-i18n="revMeta">36 Bewertungen auf Google</div>
+          </div>
+        </div>
+      </div>
+      <div class="rev-grid">
+        <!-- All review text below is REAL, taken verbatim from provided Google reviews. None invented or paraphrased. -->
+        <article class="rev-card feature reveal">
+          <div class="stars">★★★★★</div>
+          <p class="quote" lang="de">„Ich war heute mit meiner Tochter dort, nachdem ich zufällig im Internet über das Café gelesen hatte. Sie hat seit 14 Jahren Zöliakie und dieser Ort war eine Offenbarung. Wirklich tolles Essen, angenehme Atmosphäre und absolut faire Preise. Die Sandwiches sind sehr empfehlenswert. Der Kaffee und die heiße Schokolade auch und besonders die frischen Donuts. So etwas haben wir glutenfrei noch nie irgendwo gegessen. Wir werden dort auf jeden Fall regelmäßig vorbeischauen.“</p>
+          <div class="who"><span class="rev-flag">🇩🇪</span><span data-i18n="revAttr">Verifizierte Google-Bewertung</span></div>
+        </article>
+        <article class="rev-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="quote" lang="de">„Super leckere glutenfreie Fladenbrote und ein Umgang, der einfach gut tut. Als wir die Abholung verschwitzt haben, wurden sie uns sogar gebracht. Vielen Dank – ihr seid wirklich toll!“</p>
+          <div class="who"><span class="rev-flag">🇩🇪</span><span data-i18n="revAttr">Verifizierte Google-Bewertung</span></div>
+        </article>
+        <article class="rev-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="quote" lang="en">“Little cafe/bakery completely glutenfree, small prices, tastes sooo delicious!”</p>
+          <div class="who"><span class="rev-flag">🇬🇧</span><span data-i18n="revAttr">Verifizierte Google-Bewertung</span></div>
+        </article>
+        <article class="rev-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="quote" lang="de">„Sehr leckeres Fladenbrot mit besonders leckerem Belag, alles glutenfrei hier, herrlich!“</p>
+          <div class="who"><span class="rev-flag">🇩🇪</span><span data-i18n="revAttr">Verifizierte Google-Bewertung</span></div>
+        </article>
+        <article class="rev-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="quote" lang="en">“Great gluten free baker. A real enrichment for Leipzig and everyone who suffers from celiac disease.”</p>
+          <div class="who"><span class="rev-flag">🇬🇧</span><span data-i18n="revAttr">Verifizierte Google-Bewertung</span></div>
+        </article>
+        <article class="rev-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="quote" lang="en">“100% gluten-free bakery. Very nice place.”</p>
+          <div class="who"><span class="rev-flag">🇬🇧</span><span data-i18n="revAttr">Verifizierte Google-Bewertung</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VISIT ============ -->
+  <section id="besuch">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow" data-i18n="visitEyebrow">Besuch uns</span>
+        <h2 data-i18n="visitH">Komm vorbei in Plagwitz</h2>
+      </div>
+      <div class="visit-grid">
+        <div class="visit-info reveal">
+          <div class="info-row">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.3-7-11a7 7 0 0 1 14 0c0 4.7-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg></div>
+            <div>
+              <h3 data-i18n="visitAddrH">Adresse</h3>
+              <p>Erich-Zeigner-Allee 64a<br>04229 Leipzig-Plagwitz</p>
+              <a class="link" href="https://www.google.com/maps/dir/?api=1&destination=Panokuko+Erich-Zeigner-Allee+64a+04229+Leipzig" target="_blank" rel="noopener noreferrer" data-i18n="visitRouteLink">Route planen →</a>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+            <div style="flex:1;">
+              <h3 data-i18n="visitHoursH">Öffnungszeiten</h3>
+              <div class="hours-line"><span data-i18n="dWeFr">Mi – Fr</span><span>11:00 – 18:00</span></div>
+              <div class="hours-line"><span data-i18n="dSa">Sa</span><span>11:00 – 16:00</span></div>
+              <div class="hours-line closed"><span data-i18n="dSuTu">So – Di</span><span data-i18n="closed">geschlossen</span></div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
+            <div>
+              <h3 data-i18n="visitContactH">Kontakt</h3>
+              <p><a class="link" href="mailto:panokuko@posteo.de">panokuko@posteo.de</a></p>
+              <!-- TODO: verify and insert real phone number -->
+              <p style="font-size:.86rem;opacity:.8;"><span data-i18n="visitPhoneNote">Telefon für Tortenbestellungen</span>: {{PHONE}}</p>
+            </div>
+          </div>
+          <div>
+            <div class="amenities">
+              <span data-i18n="am1">Offene Küche</span>
+              <span data-i18n="am2">Geschlechtsneutrale Toiletten</span>
+              <span data-i18n="am3">Karte &amp; NFC</span>
+              <span data-i18n="am4">Hunde willkommen</span>
+            </div>
+            <div class="visit-cta">
+              <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&destination=Panokuko+Erich-Zeigner-Allee+64a+04229+Leipzig" target="_blank" rel="noopener noreferrer" data-i18n="ctaRoute">Route planen</a>
+              <a class="btn btn-sage" href="https://instagram.com/pano.kuko" target="_blank" rel="noopener noreferrer" data-i18n="ctaInsta">@pano.kuko</a>
+            </div>
+          </div>
+        </div>
+        <div class="map-card reveal">
+          <iframe src="https://maps.google.com/maps?q=Panokuko+Erich-Zeigner-Allee+64a+04229+Leipzig&output=embed" title="Panokuko auf Google Maps" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <span class="logo">Pan<span class="mark">o</span>kuko</span>
+        <p data-i18n="footTag">Glutenfreie Backstube, Café &amp; Naturkostladen in Leipzig-Plagwitz. 100% glutenfrei — sicher für Zöliakie.</p>
+        <div class="foot-cta">
+          <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&destination=Panokuko+Erich-Zeigner-Allee+64a+04229+Leipzig" target="_blank" rel="noopener noreferrer" data-i18n="ctaRoute">Route planen</a>
+          <!-- TODO: verify and insert real phone number -->
+          <a class="btn btn-ghost" href="tel:+49{{PHONE}}" style="color:#e8e1d4;border-color:rgba(255,255,255,.4);" data-i18n="ctaCall">Anrufen</a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4 data-i18n="footVisit">Besuch</h4>
+        <p>Erich-Zeigner-Allee 64a<br>04229 Leipzig</p>
+        <p data-i18n="footHours">Mi–Fr 11–18 · Sa 11–16</p>
+        <a href="mailto:panokuko@posteo.de">panokuko@posteo.de</a>
+      </div>
+      <div class="foot-col">
+        <h4 data-i18n="footFollow">Folgen</h4>
+        <a href="https://instagram.com/pano.kuko" target="_blank" rel="noopener noreferrer">Instagram @pano.kuko</a>
+        <a href="#impressum" data-i18n="footImprint">Impressum</a>
+        <a href="#datenschutz" data-i18n="footPrivacy">Datenschutz</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>Panokuko · Leipzig-Plagwitz · <span data-i18n="footGf">100% glutenfrei</span></span>
+      <span>© <span id="year"></span> Panokuko</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ MOBILE ACTION BAR ============ -->
+<nav class="action-bar" aria-label="Schnellaktionen">
+  <!-- TODO: verify and insert real phone number -->
+  <a href="tel:+49{{PHONE}}">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+    <span data-i18n="ctaCall">Anrufen</span>
+  </a>
+  <a href="https://www.google.com/maps/dir/?api=1&destination=Panokuko+Erich-Zeigner-Allee+64a+04229+Leipzig" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.3-7-11a7 7 0 0 1 14 0c0 4.7-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+    <span data-i18n="abRoute">Route</span>
+  </a>
+  <a href="#besuch">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 4l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-9.5Z"/></svg>
+    <span data-i18n="abVisit">Besuchen</span>
+  </a>
+</nav>
+
+<!-- floating call button -->
+<!-- TODO: verify and insert real phone number -->
+<a class="fab" href="tel:+49{{PHONE}}" aria-label="Anrufen">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+</a>
+
+<!-- ============ TWEAKS ============ -->
+<button class="tweaks-toggle" id="tweaksToggle">Tweaks</button>
+<div class="tweaks" id="tweaks" aria-label="Design-Tweaks">
+  <button class="tw-close" id="tweaksClose" aria-label="Schließen">&times;</button>
+  <h4>Tweaks</h4>
+  <p class="hint">Spiel mit dem Look der Seite.</p>
+  <div class="tw-row">
+    <label>Akzentfarbe</label>
+    <div class="swatches" id="swAccent">
+      <button data-accent="#C47A5A" class="active" style="background:#C47A5A" aria-label="Terracotta"></button>
+      <button data-accent="#B5603C" style="background:#B5603C" aria-label="Gebrannt"></button>
+      <button data-accent="#8B9E7C" style="background:#8B9E7C" aria-label="Salbei"></button>
+      <button data-accent="#C99A4B" style="background:#C99A4B" aria-label="Gold"></button>
+    </div>
+  </div>
+  <div class="tw-row">
+    <label>Serif-Überschriften</label>
+    <div class="seg" id="segSerif">
+      <button data-serif="on" class="active">An</button>
+      <button data-serif="off">Aus</button>
+    </div>
+  </div>
+  <div class="tw-row">
+    <label>Filmkorn</label>
+    <div class="seg" id="segGrain">
+      <button data-grain="on" class="active">An</button>
+      <button data-grain="off">Aus</button>
+    </div>
+  </div>
+  <div class="tw-row">
+    <label>Blur beim Scrollen — <span id="blurVal">9</span>px</label>
+    <input type="range" id="blurRange" min="0" max="14" step="1" value="9" />
+  </div>
+</div>
+
+<script>
+/* ============ i18n ============ */
+const I18N = {
+  de:{
+    brandTag:"glutenfreie Backstube & Café",
+    navPromise:"Versprechen", navBakery:"Backstube", navAbout:"Über uns", navReviews:"Bewertungen", navVisit:"Besuch", navCta:"Besuche uns",
+    badgeGf:"100% glutenfrei", badgeCeliac:"zöliakie-sicher",
+    heroH:"Hier darfst du<br>alles essen.", heroSub:"100% glutenfrei. Die ganze Küche. Jedes Gericht. Ohne Angst.",
+    ctaRoute:"Route planen", ctaCall:"Anrufen", ctaInsta:"@pano.kuko",
+    promiseEyebrow:"Unser Versprechen", promiseH:"Kein Fragen. Kein Zögern. Keine Angst.",
+    promiseP:"Bei uns ist nicht eine Sache glutenfrei — sondern alles. Die ganze Backstube, jede Zutat, jede Oberfläche.",
+    p1H:"Eigene Backstube", p1P:"Unsere Küche ist zu 100% glutenfrei. Kein Weizen, kein Risiko, keine geteilten Geräte.",
+    p2H:"Zöliakie-sicher", p2P:"Geeignet für Menschen mit Zöliakie. Nicht nur „glutenfrei-freundlich“ — sondern wirklich sicher.",
+    p3H:"Brot, Kuchen, Donuts", p3P:"Alles, was du sonst nie haben konntest — frisch gebacken, jeden Tag.",
+    p4H:"Auch vegan", p4P:"Pflanzliche Milch, vegane Optionen. Für alle, die bewusst genießen.",
+    bakeEyebrow:"Aus der Backstube", bakeH:"Was wir backen",
+    bakeP:"Unsere Auswahl wechselt täglich. Das hier sind die Dinge, die du bei uns finden kannst — alle glutenfrei, alle frisch.",
+    bakeMost:"Meistgeliebt", bakeSour:"Sauerteig", bakeLunch:"Mittags", bakeSweet:"Süßes", bakeOrder:"Auf Bestellung", bakeSpecial:"Besonders",
+    bake1:"Frisch gebacken, herzhaft belegt. Unser meistgeliebtes Gericht.",
+    bake2:"Echtes Sauerteigbrot aus Buchweizenmehl.",
+    bake3H:"Warme Gerichte", bake3:"Saisonale Mittagsgerichte mit Gemüse aus der Region.",
+    bake4H:"Donuts & Waffeln", bake4:"Ja, wirklich. Glutenfreie Donuts und knusprige Waffeln. Frisch.",
+    bake5:"Auch als Bestellung für deinen Geburtstag.",
+    bake6:"Glutenfreies Brot aus Maniok — anders, überraschend, großartig.",
+    bakeNote:'Unsere Auswahl wechselt täglich. Folge <a href="https://instagram.com/pano.kuko" target="_blank" rel="noopener noreferrer">@pano.kuko</a> für die Vitrine von heute.',
+    aboutEyebrow:"Über Panokuko",
+    about1:"Eine kleine, frauengeführte Backstube mit Café und Naturkostladen in Leipzig-Plagwitz.",
+    about2:"Bei uns ist die gesamte Küche glutenfrei — nicht nur eine Option auf der Karte, sondern alles. Wir backen täglich frisch: Brot, Focaccia, Kuchen, Donuts. Mittags gibt es warme saisonale Gerichte mit Gemüse aus der Region.",
+    about3:"Donnerstags kann man eine bunte Gemüsekiste mitnehmen — ohne Abo. Panokuko ist ein Ort zum Wohlfühlen, Vorbeischauen und Wiederkommen.",
+    extraEyebrow:"Mehr als ein Café", extraH:"Was es bei uns noch gibt",
+    e1H:"Naturkost-Shop", e1P:"Regionale Produkte zum Mitnehmen.",
+    e2H:"Gemüsekiste donnerstags", e2P:"Frisches Gemüse, ohne Abo.",
+    e3H:"Offenes Strick-Café", e3P:"Jeden Donnerstag. Komm vorbei, bring deine Wolle mit.",
+    e4H:"Tortenbestellung", e4P:"Glutenfreie Torten für deinen Geburtstag — auf Bestellung.",
+    revEyebrow:"Was Gäste sagen", revH:"Für viele eine Offenbarung.", revMeta:"36 Bewertungen auf Google", revAttr:"Verifizierte Google-Bewertung",
+    visitEyebrow:"Besuch uns", visitH:"Komm vorbei in Plagwitz",
+    visitAddrH:"Adresse", visitRouteLink:"Route planen →",
+    visitHoursH:"Öffnungszeiten", dWeFr:"Mi – Fr", dSa:"Sa", dSuTu:"So – Di", closed:"geschlossen",
+    visitContactH:"Kontakt", visitPhoneNote:"Telefon für Tortenbestellungen",
+    am1:"Offene Küche", am2:"Geschlechtsneutrale Toiletten", am3:"Karte & NFC", am4:"Hunde willkommen",
+    abRoute:"Route", abVisit:"Besuchen",
+    footTag:"Glutenfreie Backstube, Café & Naturkostladen in Leipzig-Plagwitz. 100% glutenfrei — sicher für Zöliakie.",
+    footVisit:"Besuch", footHours:"Mi–Fr 11–18 · Sa 11–16", footFollow:"Folgen", footImprint:"Impressum", footPrivacy:"Datenschutz", footGf:"100% glutenfrei"
+  },
+  en:{
+    brandTag:"gluten-free bakery & café",
+    navPromise:"Promise", navBakery:"Bakery", navAbout:"About", navReviews:"Reviews", navVisit:"Visit", navCta:"Visit Us",
+    badgeGf:"100% gluten-free", badgeCeliac:"celiac-safe",
+    heroH:"Here you can<br>eat everything.", heroSub:"100% gluten-free. The entire kitchen. Every dish. Without fear.",
+    ctaRoute:"Get Directions", ctaCall:"Call Us", ctaInsta:"@pano.kuko",
+    promiseEyebrow:"Our Promise", promiseH:"No asking. No hesitating. No fear.",
+    promiseP:"Here it isn't one thing that's gluten-free — it's everything. The whole bakery, every ingredient, every surface.",
+    p1H:"Dedicated Bakery", p1P:"Our kitchen is 100% gluten-free. No wheat, no risk, no shared equipment.",
+    p2H:"Celiac-Safe", p2P:"Suitable for people with celiac disease. Not just \u2018GF-friendly\u2019 — genuinely safe.",
+    p3H:"Bread, Cake, Doughnuts", p3P:"Everything you could never have before — freshly baked, every day.",
+    p4H:"Also Vegan", p4P:"Plant-based milk, vegan options. For everyone who eats with intention.",
+    bakeEyebrow:"From the Bakery", bakeH:"What We Bake",
+    bakeP:"Our selection changes daily. These are the kinds of things you'll find here — all gluten-free, all fresh.",
+    bakeMost:"Most loved", bakeSour:"Sourdough", bakeLunch:"Lunch", bakeSweet:"Sweet", bakeOrder:"Made to order", bakeSpecial:"Special",
+    bake1:"Freshly baked, generously topped. Our most-loved dish.",
+    bake2:"Real sourdough bread from buckwheat flour.",
+    bake3H:"Warm Dishes", bake3:"Seasonal lunch dishes with vegetables from the region.",
+    bake4H:"Doughnuts & Waffles", bake4:"Yes, really. Gluten-free doughnuts and crispy waffles. Fresh.",
+    bake5:"Also available as custom orders for your birthday.",
+    bake6:"Gluten-free bread from cassava — different, surprising, wonderful.",
+    bakeNote:'Our selection changes daily. Follow <a href="https://instagram.com/pano.kuko" target="_blank" rel="noopener noreferrer">@pano.kuko</a> for today\'s vitrine.',
+    aboutEyebrow:"About Panokuko",
+    about1:"A small, women-run bakery with a café and natural food shop in Leipzig-Plagwitz.",
+    about2:"Our entire kitchen is gluten-free — not just an option on the menu, but everything. We bake fresh every day: bread, focaccia, cake, doughnuts. At lunch, we serve warm seasonal dishes with vegetables from the region.",
+    about3:"On Thursdays, you can pick up a colorful vegetable box — no subscription needed. Panokuko is a place to feel good, drop by, and come back.",
+    extraEyebrow:"More Than a Café", extraH:"What else you'll find here",
+    e1H:"Natural Food Shop", e1P:"Regional products to take home.",
+    e2H:"Vegetable box on Thursdays", e2P:"Fresh vegetables, no subscription.",
+    e3H:"Open Knitting Café", e3P:"Every Thursday. Drop by, bring your yarn.",
+    e4H:"Cake Orders", e4P:"Gluten-free cakes for your birthday — made to order.",
+    revEyebrow:"What guests say", revH:"For many, a revelation.", revMeta:"36 reviews on Google", revAttr:"Verified Google review",
+    visitEyebrow:"Visit Us", visitH:"Drop by in Plagwitz",
+    visitAddrH:"Address", visitRouteLink:"Get directions →",
+    visitHoursH:"Opening Hours", dWeFr:"Wed – Fri", dSa:"Sat", dSuTu:"Sun – Tue", closed:"closed",
+    visitContactH:"Contact", visitPhoneNote:"Phone for cake orders",
+    am1:"Open kitchen", am2:"Gender-neutral bathrooms", am3:"Card & NFC", am4:"Dogs welcome",
+    abRoute:"Route", abVisit:"Visit",
+    footTag:"Gluten-free bakery, café & natural food shop in Leipzig-Plagwitz. 100% gluten-free — safe for celiacs.",
+    footVisit:"Visit", footHours:"Wed–Fri 11–18 · Sat 11–16", footFollow:"Follow", footImprint:"Imprint", footPrivacy:"Privacy", footGf:"100% gluten-free"
+  }
+};
+
+function setLang(lang){
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const k = el.getAttribute("data-i18n");
+    const v = I18N[lang] && I18N[lang][k];
+    if(v!=null) el.innerHTML = v;
+  });
+  document.querySelectorAll(".lang button").forEach(b=>{
+    b.classList.toggle("active", b.dataset.lang===lang);
+  });
+  try{ localStorage.setItem("pk_lang", lang); }catch(e){}
+}
+document.querySelectorAll(".lang button").forEach(b=>{
+  b.addEventListener("click", ()=> setLang(b.dataset.lang));
+});
+
+/* ============ header scroll ============ */
+const header = document.getElementById("site-header");
+const onScroll = ()=> header.classList.toggle("scrolled", window.scrollY>20);
+window.addEventListener("scroll", onScroll, {passive:true}); onScroll();
+
+/* ============ hamburger / drawer ============ */
+const drawer = document.getElementById("drawer");
+const scrim = document.getElementById("scrim");
+const ham = document.getElementById("hamburger");
+function openDrawer(o){
+  drawer.classList.toggle("open", o);
+  scrim.classList.toggle("open", o);
+  ham.classList.toggle("open", o);
+  ham.setAttribute("aria-expanded", o?"true":"false");
+  document.body.style.overflow = o ? "hidden" : "";
+}
+ham.addEventListener("click", ()=> openDrawer(!drawer.classList.contains("open")));
+scrim.addEventListener("click", ()=> openDrawer(false));
+document.getElementById("drawerClose").addEventListener("click", ()=> openDrawer(false));
+drawer.querySelectorAll("a[href^='#']").forEach(a=> a.addEventListener("click", ()=> openDrawer(false)));
+
+/* ============ tweaks ============ */
+const tw = document.getElementById("tweaks");
+document.getElementById("tweaksToggle").addEventListener("click", ()=> tw.classList.toggle("open"));
+document.getElementById("tweaksClose").addEventListener("click", ()=> tw.classList.remove("open"));
+
+document.getElementById("swAccent").addEventListener("click", e=>{
+  const b = e.target.closest("button"); if(!b) return;
+  document.documentElement.style.setProperty("--accent", b.dataset.accent);
+  document.querySelectorAll("#swAccent button").forEach(x=> x.classList.toggle("active", x===b));
+  try{ localStorage.setItem("pk_accent", b.dataset.accent); }catch(e){}
+});
+document.getElementById("segSerif").addEventListener("click", e=>{
+  const b=e.target.closest("button"); if(!b) return;
+  const on = b.dataset.serif==="on";
+  document.documentElement.style.setProperty("--serif", on ? '"DM Serif Display", Georgia, serif' : '"DM Sans", system-ui, sans-serif');
+  document.querySelectorAll("#segSerif button").forEach(x=> x.classList.toggle("active", x===b));
+  try{ localStorage.setItem("pk_serif", b.dataset.serif); }catch(e){}
+});
+document.getElementById("segGrain").addEventListener("click", e=>{
+  const b=e.target.closest("button"); if(!b) return;
+  document.documentElement.style.setProperty("--grain-opacity", b.dataset.grain==="on" ? ".5" : "0");
+  document.querySelectorAll("#segGrain button").forEach(x=> x.classList.toggle("active", x===b));
+  try{ localStorage.setItem("pk_grain", b.dataset.grain); }catch(e){}
+});
+const blurRange = document.getElementById("blurRange");
+blurRange.addEventListener("input", ()=>{
+  document.documentElement.style.setProperty("--blur-cap", blurRange.value+"px");
+  document.getElementById("blurVal").textContent = blurRange.value;
+  try{ localStorage.setItem("pk_blur", blurRange.value); }catch(e){}
+});
+
+/* ============ restore prefs ============ */
+(function restore(){
+  let lang="de";
+  try{
+    lang = localStorage.getItem("pk_lang") || "de";
+    const a = localStorage.getItem("pk_accent"); if(a){ document.documentElement.style.setProperty("--accent",a);
+      document.querySelectorAll("#swAccent button").forEach(x=> x.classList.toggle("active", x.dataset.accent===a)); }
+    const s = localStorage.getItem("pk_serif"); if(s==="off"){ document.querySelector('#segSerif [data-serif="off"]').click(); }
+    const g = localStorage.getItem("pk_grain"); if(g==="off"){ document.querySelector('#segGrain [data-grain="off"]').click(); }
+    const bl = localStorage.getItem("pk_blur"); if(bl){ blurRange.value=bl; blurRange.dispatchEvent(new Event("input")); }
+  }catch(e){}
+  setLang(lang);
+})();
+
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
